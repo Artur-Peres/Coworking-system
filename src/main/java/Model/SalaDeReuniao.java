@@ -1,4 +1,4 @@
-package model;
+package Model;
 
 public class SalaDeReuniao extends Espaco {
     private boolean usoProjetor;
@@ -9,8 +9,13 @@ public class SalaDeReuniao extends Espaco {
         this.usoProjetor = false;
     }
 
-    public boolean isUsoProjetor() { return usoProjetor; }
-    public void setUsoProjetor(boolean usoProjetor) { this.usoProjetor = usoProjetor; }
+    public boolean isUsoProjetor() {
+        return usoProjetor;
+    }
+
+    public void setUsoProjetor(boolean usoProjetor) {
+        this.usoProjetor = usoProjetor;
+    }
 
     @Override
     public double calcularCustoReserva(int horas) {

@@ -6,13 +6,15 @@ public abstract class Espaco {
     private int capacidade;
     private boolean disponivel;
     private double precoPorHora;
+    private String tipo;
 
-    public Espaco(int id, String nome, int capacidade, double precoPorHora) {
+    public Espaco(int id, String nome, int capacidade, double precoPorHora, String tipo) {
         this.id = id;
         this.nome = nome;
         this.capacidade = capacidade;
         this.disponivel = true;
         this.precoPorHora = precoPorHora;
+        this.tipo= tipo;
     }
 
     // Getters e Setters
@@ -31,6 +33,9 @@ public abstract class Espaco {
     public double getPrecoPorHora() { return precoPorHora; }
     public void setPrecoPorHora(double precoPorHora) { this.precoPorHora = precoPorHora; }
 
+    public String getTipo() {return tipo;}
+
     // Método abstrato
     public abstract double calcularCustoReserva(int horas);
+
 }

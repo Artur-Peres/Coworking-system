@@ -1,11 +1,15 @@
 package DAO;
 
+import Model.Espaco;
+import Model.Pagamento;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class PagamentoDAO  extends Database{
+public class PagamentoDAO {
     static final String URL = "jdbc:sqlite:database/coworking.db";
 
     public void criarTabelaPagamento(){
@@ -22,6 +26,24 @@ public class PagamentoDAO  extends Database{
              Statement stmt = conn.createStatement()) {
 
             stmt.execute(sql);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void inserir(Pagamento pagamento) {
+        String sql = "INSERT INTO pagamentos(reserva_id, valor_pago, data_pagamento, metodo) VALUES (?, ?, ?, ?)";
+
+        try (Connection conn = DriverManager.getConnection(URL);
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setInt(1, pagamento.getIdReserva());
+            stmt.setDouble(2, pagamento.getValorPago());
+            stmt.setString(3, pagamento.getData().toString());
+            stmt.setString(4, pagamento.getMetodo().getDescricao());
+
+            stmt.executeUpdate();
 
         } catch (SQLException e) {
             e.printStackTrace();

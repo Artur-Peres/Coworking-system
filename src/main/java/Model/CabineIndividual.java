@@ -4,8 +4,8 @@ public class CabineIndividual extends Espaco {
     private static final double DESCONTO_LONGA_DURACAO = 0.10;
     private static final int HORAS_DESCONTO = 4;
 
-    public CabineIndividual(int id, String nome, int capacidade, double precoPorHora) {
-        super(id, nome, capacidade, precoPorHora);
+    public CabineIndividual(int id, String nome, int capacidade, double precoPorHora, String tipo) {
+        super(id, nome, capacidade, precoPorHora, tipo);
     }
 
     @Override

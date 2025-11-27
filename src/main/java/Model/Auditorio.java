@@ -3,8 +3,8 @@ package Model;
 public class Auditorio extends Espaco {
     private static final double TAXA_EVENTO = 100.0;
 
-    public Auditorio(int id, String nome, int capacidade, double precoPorHora) {
-        super(id, nome, capacidade, precoPorHora);
+    public Auditorio(int id, String nome, int capacidade, double precoPorHora, String tipo) {
+        super(id, nome, capacidade, precoPorHora, tipo);
     }
 
     @Override

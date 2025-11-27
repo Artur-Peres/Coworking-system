@@ -4,8 +4,8 @@ public class SalaDeReuniao extends Espaco {
     private boolean usoProjetor;
     private static final double TAXA_PROJETOR = 15.0;
 
-    public SalaDeReuniao(int id, String nome, int capacidade, double precoPorHora) {
-        super(id, nome, capacidade, precoPorHora);
+    public SalaDeReuniao(int id, String nome, int capacidade, double precoPorHora, String tipo) {
+        super(id, nome, capacidade, precoPorHora, tipo);
         this.usoProjetor = false;
     }
 
@@ -16,6 +16,8 @@ public class SalaDeReuniao extends Espaco {
     public void setUsoProjetor(boolean usoProjetor) {
         this.usoProjetor = usoProjetor;
     }
+
+    public static double getTaxaProjetorA() {return TAXA_PROJETOR;}
 
     @Override
     public double calcularCustoReserva(int horas) {

@@ -26,23 +26,43 @@ public class Reserva {
     }
 
     // Getters e Setters
-    public int getId() { return id; }
-    public void setId(int id) { this.id = id; }
+    public int getId() { 
+        return id; 
+    }
+    public void setId(int id) { 
+        this.id = id;
+    }
 
-    public Espaco getEspaco() { return espaco; }
-    public void setEspaco(Espaco espaco) { this.espaco = espaco; }
+    public Espaco getEspaco() {
+        return espaco; 
+    }
+    public void setEspaco(Espaco espaco) { 
+        this.espaco = espaco;
+    }
 
-    public LocalDateTime getDataHoraInicio() { return dataHoraInicio; }
+    public LocalDateTime getDataHoraInicio() { 
+        return dataHoraInicio; 
+    }
     public void setDataHoraInicio(LocalDateTime dataHoraInicio) { this.dataHoraInicio = dataHoraInicio; }
 
-    public LocalDateTime getDataHoraFim() { return dataHoraFim; }
+    public LocalDateTime getDataHoraFim() { 
+        return dataHoraFim;
+    }
     public void setDataHoraFim(LocalDateTime dataHoraFim) { this.dataHoraFim = dataHoraFim; }
 
-    public double getValorCalculado() { return valorCalculado; }
-    public void setValorCalculado(double valorCalculado) { this.valorCalculado = valorCalculado; }
+    public double getValorCalculado() { 
+        return valorCalculado;
+    }
+    public void setValorCalculado(double valorCalculado) { 
+        this.valorCalculado = valorCalculado; 
+    }
 
-    public boolean isAtiva() { return ativa; }
-    public void setAtiva(boolean ativa) { this.ativa = ativa; }
+    public boolean isAtiva() {
+        return ativa;
+    }
+    public void setAtiva(boolean ativa) {
+        this.ativa = ativa; 
+    }
 
     public boolean isSobreposta(Reserva outra) {
         return this.dataHoraInicio.isBefore(outra.dataHoraFim) &&
@@ -59,4 +79,5 @@ public class Reserva {
         }
         return 0.0;
     }
+
 }

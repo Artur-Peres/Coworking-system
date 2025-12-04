@@ -43,12 +43,16 @@ public class Reserva {
     public LocalDateTime getDataHoraInicio() { 
         return dataHoraInicio; 
     }
-    public void setDataHoraInicio(LocalDateTime dataHoraInicio) { this.dataHoraInicio = dataHoraInicio; }
+    public void setDataHoraInicio(LocalDateTime dataHoraInicio) { 
+        this.dataHoraInicio = dataHoraInicio; 
+    }
 
     public LocalDateTime getDataHoraFim() { 
         return dataHoraFim;
     }
-    public void setDataHoraFim(LocalDateTime dataHoraFim) { this.dataHoraFim = dataHoraFim; }
+    public void setDataHoraFim(LocalDateTime dataHoraFim) { 
+        this.dataHoraFim = dataHoraFim;
+    }
 
     public double getValorCalculado() { 
         return valorCalculado;
@@ -81,3 +85,4 @@ public class Reserva {
     }
 
 }
+

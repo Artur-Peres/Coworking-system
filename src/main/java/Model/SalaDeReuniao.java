@@ -4,8 +4,12 @@ public class SalaDeReuniao extends Espaco {
     private boolean usoProjetor;
     private static final double TAXA_PROJETOR = 15.0;
 
-    public SalaDeReuniao(int id, String nome, int capacidade, double precoPorHora, String tipo) {
-        super(id, nome, capacidade, precoPorHora, tipo);
+    public SalaDeReuniao(){
+        super();
+    }
+
+    public SalaDeReuniao(String nome, int capacidade, double precoPorHora, String tipo) {
+        super(nome, capacidade, precoPorHora, tipo);
         this.usoProjetor = false;
     }
 

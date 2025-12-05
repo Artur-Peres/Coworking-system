@@ -1,5 +1,6 @@
 package DAO;
 
+import Exceptions.EspacoDuplicadoException;
 import Model.Espaco;
 import Model.Reserva;
 
@@ -33,7 +34,7 @@ public class ReservaDAO {
         }
     }
 
-   public void inserir(Reserva reserva) {
+    public void inserir(Reserva reserva) {
         String sql = "INSERT INTO reservas(espaco_id, data_inicio, data_fim, valor_calculado, status) VALUES (?, ?, ?, ?, ?)";
 
         try (Connection conn = DriverManager.getConnection(URL);
@@ -47,6 +48,27 @@ public class ReservaDAO {
 
             stmt.executeUpdate();
 
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void cancelarReserva(int id){
+        String sql = "UPDATE reservas SET status = ? WHERE id = ?";
+
+        try (Connection conn = DriverManager.getConnection(URL);
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setString(1, "cancelado");
+            stmt.setInt(2, id);
+
+            int linhas = stmt.executeUpdate();
+
+            if (linhas > 0) {
+                System.out.println("Reserva cancelada.");
+            } else {
+                System.out.println("Nenhuma reserva encontrada com esse ID.");
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }

@@ -8,8 +8,9 @@ public abstract class Espaco {
     private double precoPorHora;
     private String tipo;
 
-    public Espaco(int id, String nome, int capacidade, double precoPorHora, String tipo) {
-        this.id = id;
+    public Espaco(){}
+
+    public Espaco(String nome, int capacidade, double precoPorHora, String tipo) {
         this.nome = nome;
         this.capacidade = capacidade;
         this.disponivel = true;
@@ -34,6 +35,10 @@ public abstract class Espaco {
     public void setPrecoPorHora(double precoPorHora) { this.precoPorHora = precoPorHora; }
 
     public String getTipo() {return tipo;}
+
+    //Getters e Setters para polinorfismo
+    public void inserir(Espaco espaco){}
+    public static void listarEspacos(){}
 
     // Método abstrato
     public abstract double calcularCustoReserva(int horas);

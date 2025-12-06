@@ -6,14 +6,15 @@ import java.time.temporal.ChronoUnit;
 public class Reserva {
     private int id;
     private Espaco espaco;
+    private int id_espaco;
     private LocalDateTime dataHoraInicio;
     private LocalDateTime dataHoraFim;
     private double valorCalculado;
     private boolean ativa;
 
-    public Reserva(int id, Espaco espaco, LocalDateTime dataHoraInicio, LocalDateTime dataHoraFim) {
-        this.id = id;
+    public Reserva(Espaco espaco, LocalDateTime dataHoraInicio, LocalDateTime dataHoraFim) {
         this.espaco = espaco;
+        this.id_espaco = espaco.getId();
         this.dataHoraInicio = dataHoraInicio;
         this.dataHoraFim = dataHoraFim;
         this.ativa = true;

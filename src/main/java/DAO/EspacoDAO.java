@@ -42,9 +42,9 @@ public class EspacoDAO {
 
     public static void inserir(Espaco espaco) throws EspacoDuplicadoException{
         String sql = "INSERT INTO espacos(nome, capacidade, disponivel, preco_por_hora, tipo, taxa_projetor, taxa_evento) VALUES (?, ?, ?, ?, ?, ?, ?)";
-        System.out.println("Teste");
+
         try (Connection conn = DriverManager.getConnection(URL);
-             PreparedStatement stmt = conn.prepareStatement(sql)) {
+             PreparedStatement stmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
 
             stmt.setString(1, espaco.getNome());
             stmt.setInt(2, espaco.getCapacidade());
@@ -55,6 +55,11 @@ public class EspacoDAO {
             stmt.setDouble(7, espaco.getTipo().equals("auditorio")? 100 : 0);
 
             stmt.executeUpdate();
+
+            ResultSet rs = stmt.getGeneratedKeys();
+            if (rs.next()) {
+                espaco.setId(rs.getInt(1));
+            }
 
         } catch (SQLException e) {
             if (e.getMessage().contains("UNIQUE")) {
@@ -84,7 +89,7 @@ public class EspacoDAO {
         }
     }
 
-    public void removerEspaco(int id) {
+    public static void removerEspaco(int id) {
         String sql = "DELETE FROM espacos WHERE id = ?";
 
         try (Connection conn = DriverManager.getConnection(URL);

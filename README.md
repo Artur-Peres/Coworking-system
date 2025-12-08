@@ -140,10 +140,10 @@ Relatórios exibidos em tela:
 
 ### 1. Clonar o repositório
 
-git clone https://github.com/SEU_USUARIO/CoWorkingManager
+git clone https://github.com/Artur-Peres/Coworking-system
 
 
-cd CoWorkingManager
+cd CoWorking-system
 
 
 ### 2. Dependência do SQLite
@@ -155,7 +155,7 @@ org.xerial:sqlite-jdbc
 ### 3. Executar o programa
 Via IDE ou terminal:
 
-java -jar coworking-manager.jar
+java -jar coworking_Projeto_jar
 
 
 ---
@@ -175,9 +175,10 @@ database.db
 ---
 
 ## Autores
-- Nome(s) dos integrantes da equipe
+- Nome(s) Artur Peres dos Santos, Bianca Mirelle frança galdino, Jonatham Alves Araujo
 - Curso: ADS – IFPB
 - Período: 2025.2
+
 
 ---
 

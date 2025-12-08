@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="550.0" prefWidth="800.0" style="-fx-background-color: ffffff;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.Controller.MenuPController">
+   <children>
+      <Button fx:id="btncadastro" layoutX="343.0" layoutY="157.0" mnemonicParsing="false" onAction="#cadastrarEspaco" prefHeight="30.0" prefWidth="97.0" style="-fx-background-radius: 10;" text="Cadastro" />
+      <Label layoutX="219.0" layoutY="65.0" prefHeight="35.0" prefWidth="362.0" text="Bem Vindo(a)! ao Menu Principal">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Button fx:id="btnreserva" layoutX="342.0" layoutY="208.0" mnemonicParsing="false" onAction="#abrirReserva" prefHeight="30.0" prefWidth="98.0" style="-fx-background-radius: 10;" text="Reserva" />
+      <Button fx:id="btnEspacos" layoutX="342.0" layoutY="260.0" mnemonicParsing="false" onAction="#abrirEspacos" prefHeight="30.0" prefWidth="98.0" style="-fx-background-radius: 10;" text="Espaços" />
+      <Button fx:id="btnRelatorio" layoutX="342.0" layoutY="305.0" mnemonicParsing="false" onAction="#relatorios" prefHeight="30.0" prefWidth="98.0" style="-fx-background-radius: 10;" text="Relatório" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="550.0" prefWidth="800.0" style="-fx-background-color: ffffff;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.Controller.CadastroController">
+   <children>
+      <Label layoutX="334.0" layoutY="35.0" prefHeight="35.0" prefWidth="132.0" style="-fx-border-color: gray; -fx-border-radius: 10; -fx-border-width: 1; -fx-text-fill: black; -fx-background-color: white;" text="Cadastre os Espaços" />
+      <TextField fx:id="txtNome" layoutX="199.0" layoutY="157.0" promptText="Nome do Espaço" style="-fx-border-color: gray; -fx-border-width: 1; -fx-text-fill: black; -fx-background-color: white;" />
+      <TextField fx:id="txtTipo" layoutX="199.0" layoutY="275.0" promptText="Tipo de Espaço" style="-fx-border-color: gray; -fx-border-width: 1; -fx-text-fill: black; -fx-background-color: white;" />
+      <TextField fx:id="txtCapacidade" layoutX="440.0" layoutY="157.0" promptText="Capacidade do local" style="-fx-border-color: gray; -fx-border-width: 1; -fx-text-fill: black; -fx-background-color: white;" />
+      <TextField fx:id="txtPreco" layoutX="440.0" layoutY="275.0" promptText="Preço por Hora" style="-fx-border-color: gray; -fx-border-width: 1; -fx-text-fill: black; -fx-background-color: white;" />
+      <Button fx:id="btnSalvar" layoutX="234.0" layoutY="364.0" mnemonicParsing="false" onAction="#salvarCadastro" prefHeight="30.0" prefWidth="82.0" style="-fx-background-color: #9F9FA9; -fx-border-radius: 10; -fx-background-radius: 10; -fx-border-color: black;" text="Salvar" />
+      <Button fx:id="btnVoltar" layoutX="475.0" layoutY="364.0" mnemonicParsing="false" onAction="#voltarAoMenu" prefHeight="30.0" prefWidth="82.0" style="-fx-background-color: #E7180B; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: black;" text="Voltar" />
+   </children>
+</AnchorPane>

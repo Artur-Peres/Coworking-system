@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<TabPane xmlns:fx="http://javafx.com/fxml"
+         fx:controller="View.Controller.RelatorioController"
+         prefWidth="800" prefHeight="600">
+
+    <!-- ===================== ABA 1 — Reservas por período ===================== -->
+    <Tab text="Reservas no Período" closable="false">
+        <VBox spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <children>
+                <HBox spacing="10">
+                    <children>
+                        <DatePicker fx:id="dpInicio"/>
+                        <DatePicker fx:id="dpFim"/>
+                        <Button fx:id="btnBuscarPeriodo" text="Buscar"/>
+                        <Button fx:id="btnVoltar" text="Voltar" />
+                    </children>
+                </HBox>
+
+                <TableView fx:id="tabelaReservas" prefHeight="500">
+                    <columns>
+                        <TableColumn fx:id="colId" text="ID" prefWidth="70"/>
+                        <TableColumn fx:id="colEspaco" text="Espaço" prefWidth="200"/>
+                        <TableColumn fx:id="colInicio" text="Início" prefWidth="200"/>
+                        <TableColumn fx:id="colFim" text="Fim" prefWidth="200"/>
+                        <TableColumn fx:id="colStatus" text="Status" prefWidth="120"/>
+                        <TableColumn fx:id="colValor" text="Valor" prefWidth="120"/>
+                    </columns>
+                </TableView>
+            </children>
+        </VBox>
+    </Tab>
+
+    <!-- ===================== ABA 2 — Faturamento ===================== -->
+    <Tab text="Faturamento" closable="false">
+        <VBox spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <children>
+                <TableView fx:id="tabelaFaturamento" prefHeight="500">
+                    <columns>
+                        <TableColumn fx:id="colTipoFatur" text="Tipo" prefWidth="300"/>
+                        <TableColumn fx:id="colValorFatur" text="Total" prefWidth="200"/>
+                    </columns>
+                </TableView>
+            </children>
+        </VBox>
+    </Tab>
+
+    <!-- ===================== ABA 3 — Utilização ===================== -->
+    <Tab text="Utilização" closable="false">
+        <VBox spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <children>
+                <TableView fx:id="tabelaUtilizacao" prefHeight="500">
+                    <columns>
+                        <TableColumn fx:id="colEspacoUtil" text="Espaço" prefWidth="300"/>
+                        <TableColumn fx:id="colHorasUtil" text="Horas Usadas" prefWidth="200"/>
+                    </columns>
+                </TableView>
+            </children>
+        </VBox>
+    </Tab>
+
+    <!-- ===================== ABA 4 — Ranking ===================== -->
+    <Tab text="Ranking" closable="false">
+        <VBox spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <children>
+                <ListView fx:id="listaRanking" prefHeight="500"/>
+            </children>
+        </VBox>
+    </Tab>
+
+</TabPane>

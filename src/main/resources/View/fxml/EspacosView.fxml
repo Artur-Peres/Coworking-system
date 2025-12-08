@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="View.Controller.EspacosController" prefWidth="800" prefHeight="600">
+    <children>
+        <TableView fx:id="tabelaEspacos" layoutX="20" layoutY="60" prefWidth="760" prefHeight="450">
+            <columns>
+                <TableColumn fx:id="colId" text="ID" prefWidth="80" />
+                <TableColumn fx:id="colNome" text="Nome" prefWidth="200" />
+                <TableColumn fx:id="colCapacidade" text="Capacidade" prefWidth="120" />
+                <TableColumn fx:id="colPreco" text="Preço/Hora" prefWidth="120" />
+                <TableColumn fx:id="colTipo" text="Tipo" prefWidth="120" />
+            </columns>
+        </TableView>
+
+        <Button text="Remover" fx:id="btnRemover" layoutX="20" layoutY="530" prefWidth="120" onAction="#removerEspaco" />
+
+        <Button text="Editar" fx:id="btnEditar" layoutX="160" layoutY="530" prefWidth="120" onAction="#editarEspaco" />
+
+        <Button text="Voltar" fx:id="btnVoltar" layoutX="680" layoutY="20" prefWidth="80" onAction="#voltar" />
+
+
+        <Label text="Gerenciar Espaços" layoutX="20" layoutY="20" style="-fx-font-size: 22px; -fx-font-weight: bold;" />
+    </children>
+</AnchorPane>
